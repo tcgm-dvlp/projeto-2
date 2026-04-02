@@ -28,6 +28,8 @@ export function Header() {
                 alt="Atena Robotics Logo"
                 fill
                 className="object-contain"
+                loading="eager"
+                priority
               />
             </div>
             <span className="text-2xl font-light tracking-wide text-foreground">

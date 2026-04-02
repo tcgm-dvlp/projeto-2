@@ -1,17 +1,11 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Inter } from 'next/font/google'
+import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const cormorant = Cormorant_Garamond({ 
+const geist = Geist({ 
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: '--font-sans'
-});
-
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: '--font-body'
 });
 
 export const metadata: Metadata = {
@@ -26,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="dark">
-      <body className={`${cormorant.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${geist.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
